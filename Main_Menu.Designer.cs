@@ -81,6 +81,7 @@
             Registrationbtn.TabIndex = 5;
             Registrationbtn.Text = "Registration";
             Registrationbtn.UseVisualStyleBackColor = true;
+            Registrationbtn.Click += Registrationbtn_Click;
             // 
             // Reglable
             // 

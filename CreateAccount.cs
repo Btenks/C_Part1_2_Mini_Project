@@ -40,17 +40,25 @@ namespace WinFormsApp1
                 try
                 {
                     connect.Open();
-                    string checkUsername = "SELECT * FROM admin WHERE username ='"
-                        +  +"'";
-                }catch(Exception ex)
+                    string checkUsername = "SELECT * FROM admin WHERE username = '"
+                        + signup_username.Text.Trim() + "'";
+
+                    using (SqlCommand checkUser = new SqlCommand(checkUsername, connect)) ;
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show("Error connecting Database" + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
-                { 
+                {
                     connect.Close();
                 }
             }
+        }
+
+        private void signup_hitmali_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

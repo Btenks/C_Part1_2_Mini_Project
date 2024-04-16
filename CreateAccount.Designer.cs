@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             panel1 = new Panel();
             checkBox2 = new CheckBox();
-            textBox3 = new TextBox();
+            signup_password = new TextBox();
             label1 = new Label();
             checkBox1 = new CheckBox();
             panel3 = new Panel();
@@ -40,9 +40,9 @@
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
-            textBox1 = new TextBox();
+            signup_username = new TextBox();
             button1 = new Button();
-            textBox2 = new TextBox();
+            signup_hitmail = new TextBox();
             label11 = new Label();
             button3 = new Button();
             label12 = new Label();
@@ -57,14 +57,14 @@
             panel1.BackColor = SystemColors.MenuText;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(checkBox2);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(signup_password);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label10);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(signup_username);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(signup_hitmail);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(label12);
@@ -86,14 +86,14 @@
             checkBox2.Text = "Show Password";
             checkBox2.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // signup_password
             // 
-            textBox3.Font = new Font("Segoe UI", 15.75F);
-            textBox3.Location = new Point(359, 248);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(388, 38);
-            textBox3.TabIndex = 12;
+            signup_password.Font = new Font("Segoe UI", 15.75F);
+            signup_password.Location = new Point(359, 248);
+            signup_password.Multiline = true;
+            signup_password.Name = "signup_password";
+            signup_password.Size = new Size(388, 38);
+            signup_password.TabIndex = 12;
             // 
             // label1
             // 
@@ -189,14 +189,14 @@
             label10.Text = "Get Started";
             label10.Click += label10_Click;
             // 
-            // textBox1
+            // signup_username
             // 
-            textBox1.Font = new Font("Segoe UI", 15.75F);
-            textBox1.Location = new Point(356, 160);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(388, 39);
-            textBox1.TabIndex = 7;
+            signup_username.Font = new Font("Segoe UI", 15.75F);
+            signup_username.Location = new Point(356, 160);
+            signup_username.Multiline = true;
+            signup_username.Name = "signup_username";
+            signup_username.Size = new Size(388, 39);
+            signup_username.TabIndex = 7;
             // 
             // button1
             // 
@@ -212,14 +212,15 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // textBox2
+            // signup_hitmail
             // 
-            textBox2.Font = new Font("Segoe UI", 15.75F);
-            textBox2.Location = new Point(356, 93);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(391, 36);
-            textBox2.TabIndex = 6;
+            signup_hitmail.Font = new Font("Segoe UI", 15.75F);
+            signup_hitmail.Location = new Point(356, 93);
+            signup_hitmail.Multiline = true;
+            signup_hitmail.Name = "signup_hitmail";
+            signup_hitmail.Size = new Size(391, 36);
+            signup_hitmail.TabIndex = 6;
+            signup_hitmail.TextChanged += signup_hitmali_TextChanged;
             // 
             // label11
             // 
@@ -287,13 +288,13 @@
         private Label label8;
         private Label label9;
         private Label label10;
-        private TextBox textBox1;
+        private TextBox signup_username;
         private Button button1;
-        private TextBox textBox2;
+        private TextBox signup_hitmail;
         private Label label11;
         private Button button3;
         private Label label12;
-        private TextBox textBox3;
+        private TextBox signup_password;
         private Label label1;
         private CheckBox checkBox2;
     }

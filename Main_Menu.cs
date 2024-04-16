@@ -21,5 +21,10 @@ namespace WinFormsApp1
         {
             Application.Exit();
         }
+
+        private void Registrationbtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
