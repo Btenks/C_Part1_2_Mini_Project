@@ -43,7 +43,31 @@ namespace WinFormsApp1
                     string checkUsername = "SELECT * FROM admin WHERE username = '"
                         + signup_username.Text.Trim() + "'";
 
-                    using (SqlCommand checkUser = new SqlCommand(checkUsername, connect)) ;
+                    using (SqlCommand checkUser = new SqlCommand(checkUsername, connect))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(checkUser);
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+
+                        if (table.Rows.Count >= 1)
+                        {
+                            MessageBox.Show(signup_username.Text + " already exists", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            string insertData = "INSERT INTO admin (email, username, pasword, date_created) "
+                                "VALUES(@email,@username,@pass,@date)";
+                            DateTime date = DateTime.Today;
+
+                            using SqlCommand cmd = new SqlCommand(insertData, connect)) ;
+                            {
+                                cmd.Parameters.AddWithValue("@email", signup_hitmail.Text.Trim());
+                                cmd.Parameters.AddWithValue("@pass", signup_hitmail.Text.Trim());
+                                cmd.Parameters.AddWithValue("@username", signup_hitmail.Text.Trim());
+                                cmd.Parameters.AddWithValue("@date", date);
+                            }
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {

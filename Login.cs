@@ -11,7 +11,9 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Main_Menu sForm = new Main_Menu();
+            sForm.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

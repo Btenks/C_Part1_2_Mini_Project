@@ -49,9 +49,9 @@
             label7 = new Label();
             checkBox1 = new CheckBox();
             panel3 = new Panel();
+            label8 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
-            label8 = new Label();
             label10 = new Label();
             textBox1 = new TextBox();
             button1 = new Button();
@@ -201,7 +201,6 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.MenuText;
-            panel1.BackgroundImage = Properties.Resources.pexels;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label13);
@@ -284,6 +283,19 @@
             panel3.Size = new Size(350, 431);
             panel3.TabIndex = 8;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.FlatStyle = FlatStyle.Flat;
+            label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.ButtonFace;
+            label8.Location = new Point(249, 410);
+            label8.Name = "label8";
+            label8.Size = new Size(101, 18);
+            label8.TabIndex = 1;
+            label8.Text = "@BTENKS95";
+            // 
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
@@ -307,19 +319,6 @@
             pictureBox2.Size = new Size(142, 130);
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.FlatStyle = FlatStyle.Flat;
-            label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(249, 410);
-            label8.Name = "label8";
-            label8.Size = new Size(101, 18);
-            label8.TabIndex = 1;
-            label8.Text = "@BTENKS95";
             // 
             // label10
             // 
