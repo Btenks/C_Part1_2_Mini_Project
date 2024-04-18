@@ -38,7 +38,7 @@ namespace WinFormsApp1
         { 
             try
             { 
-                if(signup_hitmail.Text="" && )
+                
             } catch { }
         }
         private void signup_hitmali_TextChanged(object sender, EventArgs e)
