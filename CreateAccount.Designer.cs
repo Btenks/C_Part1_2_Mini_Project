@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             panel1 = new Panel();
-            checkBox2 = new CheckBox();
+            Confirm_Password = new TextBox();
+            label2 = new Label();
+            checkBox3 = new CheckBox();
             signup_password = new TextBox();
             label1 = new Label();
             checkBox1 = new CheckBox();
@@ -56,7 +58,9 @@
             // 
             panel1.BackColor = SystemColors.MenuText;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Controls.Add(checkBox2);
+            panel1.Controls.Add(Confirm_Password);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(checkBox3);
             panel1.Controls.Add(signup_password);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(checkBox1);
@@ -72,24 +76,46 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 452);
             panel1.TabIndex = 10;
+            panel1.Paint += panel1_Paint;
             // 
-            // checkBox2
+            // Confirm_Password
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.BackColor = Color.Transparent;
-            checkBox2.Font = new Font("Segoe UI", 12F);
-            checkBox2.ForeColor = SystemColors.ControlLightLight;
-            checkBox2.Location = new Point(589, 205);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(138, 25);
-            checkBox2.TabIndex = 13;
-            checkBox2.Text = "Show Password";
-            checkBox2.UseVisualStyleBackColor = false;
+            Confirm_Password.Font = new Font("Segoe UI", 15.75F);
+            Confirm_Password.Location = new Point(356, 282);
+            Confirm_Password.Multiline = true;
+            Confirm_Password.Name = "Confirm_Password";
+            Confirm_Password.Size = new Size(388, 38);
+            Confirm_Password.TabIndex = 16;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Papyrus", 12F, FontStyle.Bold | FontStyle.Italic);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(365, 254);
+            label2.Name = "label2";
+            label2.Size = new Size(155, 25);
+            label2.TabIndex = 15;
+            label2.Text = "Confirm Password";
+            // 
+            // checkBox3
+            // 
+            checkBox3.AutoSize = true;
+            checkBox3.BackColor = Color.Transparent;
+            checkBox3.Font = new Font("Segoe UI", 12F);
+            checkBox3.ForeColor = SystemColors.ControlLightLight;
+            checkBox3.Location = new Point(618, 326);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(138, 25);
+            checkBox3.TabIndex = 14;
+            checkBox3.Text = "Show Password";
+            checkBox3.UseVisualStyleBackColor = false;
             // 
             // signup_password
             // 
             signup_password.Font = new Font("Segoe UI", 15.75F);
-            signup_password.Location = new Point(359, 248);
+            signup_password.Location = new Point(359, 207);
             signup_password.Multiline = true;
             signup_password.Name = "signup_password";
             signup_password.Size = new Size(388, 38);
@@ -101,7 +127,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Papyrus", 12F, FontStyle.Bold | FontStyle.Italic);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(356, 220);
+            label1.Location = new Point(356, 179);
             label1.Name = "label1";
             label1.Size = new Size(86, 25);
             label1.TabIndex = 11;
@@ -113,7 +139,7 @@
             checkBox1.BackColor = Color.Transparent;
             checkBox1.Font = new Font("Segoe UI", 12F);
             checkBox1.ForeColor = SystemColors.ControlLightLight;
-            checkBox1.Location = new Point(589, 292);
+            checkBox1.Location = new Point(618, 251);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(138, 25);
             checkBox1.TabIndex = 9;
@@ -192,7 +218,7 @@
             // signup_username
             // 
             signup_username.Font = new Font("Segoe UI", 15.75F);
-            signup_username.Location = new Point(356, 160);
+            signup_username.Location = new Point(356, 137);
             signup_username.Multiline = true;
             signup_username.Name = "signup_username";
             signup_username.Size = new Size(388, 39);
@@ -204,9 +230,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 14F);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(356, 356);
+            button1.Location = new Point(356, 399);
             button1.Name = "button1";
-            button1.Size = new Size(125, 62);
+            button1.Size = new Size(125, 39);
             button1.TabIndex = 1;
             button1.Text = "Signup";
             button1.UseVisualStyleBackColor = false;
@@ -215,7 +241,7 @@
             // signup_hitmail
             // 
             signup_hitmail.Font = new Font("Segoe UI", 15.75F);
-            signup_hitmail.Location = new Point(356, 93);
+            signup_hitmail.Location = new Point(356, 70);
             signup_hitmail.Multiline = true;
             signup_hitmail.Name = "signup_hitmail";
             signup_hitmail.Size = new Size(391, 36);
@@ -228,7 +254,7 @@
             label11.BackColor = Color.Transparent;
             label11.Font = new Font("Papyrus", 12F, FontStyle.Bold | FontStyle.Italic);
             label11.ForeColor = SystemColors.ControlLightLight;
-            label11.Location = new Point(356, 132);
+            label11.Location = new Point(356, 109);
             label11.Name = "label11";
             label11.Size = new Size(91, 25);
             label11.TabIndex = 4;
@@ -240,9 +266,9 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 14F);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(622, 356);
+            button3.Location = new Point(631, 399);
             button3.Name = "button3";
-            button3.Size = new Size(125, 62);
+            button3.Size = new Size(125, 39);
             button3.TabIndex = 0;
             button3.Text = "Back to Login";
             button3.UseVisualStyleBackColor = false;
@@ -254,7 +280,7 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Papyrus", 12F, FontStyle.Bold | FontStyle.Italic);
             label12.ForeColor = SystemColors.ControlLightLight;
-            label12.Location = new Point(356, 65);
+            label12.Location = new Point(356, 42);
             label12.Name = "label12";
             label12.Size = new Size(140, 25);
             label12.TabIndex = 3;
@@ -296,6 +322,8 @@
         private Label label12;
         private TextBox signup_password;
         private Label label1;
-        private CheckBox checkBox2;
+        private TextBox Confirm_Password;
+        private Label label2;
+        private CheckBox checkBox3;
     }
 }

@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WinFormsApp1
 {
 
     public partial class CreateAccount : Form
     {
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Tendai\Documents\LoginData.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename=C:\\Users\\Tendai\\Documents\\LoginDB.mdf;Integrated Security = True; Connect Timeout = 30");
         public CreateAccount()
         {
-            InitializeComponent();
+
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -34,10 +35,18 @@ namespace WinFormsApp1
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-            
+        { 
+            try
+            { 
+                if(signup_hitmail.Text="" && )
+            } catch { }
         }
         private void signup_hitmali_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
