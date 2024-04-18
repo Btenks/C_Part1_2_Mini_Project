@@ -25,6 +25,9 @@ namespace WinFormsApp1
         private void Registrationbtn_Click(object sender, EventArgs e)
         {
 
+            ApplicationParent Parent = new ApplicationParent();
+            Parent.Show();
+            this.Hide();
         }
     }
 }
