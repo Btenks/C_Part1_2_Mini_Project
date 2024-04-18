@@ -46,9 +46,11 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_47_59_57cbd009;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Location = new Point(1, -2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(277, 148);
+            pictureBox1.Size = new Size(301, 165);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -57,10 +59,13 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1256, 764);
+            BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_48_00_d85f03d3;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1117, 764);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "ApplicationParent";
             StartPosition = FormStartPosition.WindowsDefaultBounds;
             Text = "ApplicationParent";

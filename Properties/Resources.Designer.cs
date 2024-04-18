@@ -119,5 +119,25 @@ namespace WinFormsApp1.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_04_19_at_00_47_59_57cbd009 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-04-19 at 00.47.59_57cbd009", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_04_19_at_00_48_00_d85f03d3 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-04-19 at 00.48.00_d85f03d3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
