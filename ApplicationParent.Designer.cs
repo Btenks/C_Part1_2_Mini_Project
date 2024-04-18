@@ -37,7 +37,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(461, 45);
+            label1.Location = new Point(473, 36);
             label1.Name = "label1";
             label1.Size = new Size(545, 70);
             label1.TabIndex = 0;
@@ -62,6 +62,7 @@
             Controls.Add(label1);
             Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "ApplicationParent";
+            StartPosition = FormStartPosition.WindowsDefaultBounds;
             Text = "ApplicationParent";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

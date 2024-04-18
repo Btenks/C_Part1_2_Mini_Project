@@ -11,8 +11,8 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Main_Menu sForm = new Main_Menu();
-            sForm.Show();
+            Main_Menu Main = new Main_Menu();
+            Main.Show();
             this.Hide();
         }
 
@@ -29,6 +29,11 @@ namespace WinFormsApp1
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
