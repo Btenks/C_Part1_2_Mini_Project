@@ -53,13 +53,13 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             label10 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            textBox2 = new TextBox();
+            Password = new TextBox();
+            Username = new TextBox();
             label11 = new Label();
             button2 = new Button();
             button3 = new Button();
             label12 = new Label();
+            Signupbtn = new Button();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -120,14 +120,14 @@
             // 
             Usernametxt.Location = new Point(356, 106);
             Usernametxt.Name = "Usernametxt";
-            Usernametxt.Size = new Size(391, 27);
+            Usernametxt.Size = new Size(391, 23);
             Usernametxt.TabIndex = 6;
             // 
             // Passwordtxt
             // 
             Passwordtxt.Location = new Point(359, 195);
             Passwordtxt.Name = "Passwordtxt";
-            Passwordtxt.Size = new Size(388, 27);
+            Passwordtxt.Size = new Size(388, 23);
             Passwordtxt.TabIndex = 7;
             // 
             // panel2
@@ -160,7 +160,7 @@
             label6.ForeColor = SystemColors.ButtonHighlight;
             label6.Location = new Point(83, 185);
             label6.Name = "label6";
-            label6.Size = new Size(232, 42);
+            label6.Size = new Size(184, 33);
             label6.TabIndex = 1;
             label6.Text = "@BTENKS95";
             // 
@@ -169,7 +169,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(0, 0);
             label5.Name = "label5";
-            label5.Size = new Size(50, 20);
+            label5.Size = new Size(38, 15);
             label5.TabIndex = 0;
             label5.Text = "label5";
             // 
@@ -202,25 +202,23 @@
             // 
             panel1.BackColor = SystemColors.MenuText;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(Signupbtn);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label13);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label10);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(Password);
+            panel1.Controls.Add(Username);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(label12);
-            panel1.Location = new Point(-1, -3);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(-1, -2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(918, 579);
+            panel1.Size = new Size(803, 434);
             panel1.TabIndex = 9;
-            panel1.Paint += panel1_Paint;
             // 
             // label14
             // 
@@ -228,9 +226,9 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Papyrus", 14.25F, FontStyle.Bold | FontStyle.Italic);
             label14.ForeColor = SystemColors.ControlLightLight;
-            label14.Location = new Point(410, 137);
+            label14.Location = new Point(359, 103);
             label14.Name = "label14";
-            label14.Size = new Size(133, 38);
+            label14.Size = new Size(105, 30);
             label14.TabIndex = 14;
             label14.Text = "Username";
             // 
@@ -240,9 +238,9 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Papyrus", 14.25F, FontStyle.Bold | FontStyle.Italic);
             label13.ForeColor = SystemColors.ControlLightLight;
-            label13.Location = new Point(410, 259);
+            label13.Location = new Point(359, 194);
             label13.Name = "label13";
-            label13.Size = new Size(125, 38);
+            label13.Size = new Size(97, 30);
             label13.TabIndex = 13;
             label13.Text = "Password";
             // 
@@ -252,12 +250,11 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Papyrus", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(410, 495);
+            label7.Location = new Point(359, 371);
             label7.Name = "label7";
-            label7.Size = new Size(230, 30);
+            label7.Size = new Size(188, 24);
             label7.TabIndex = 10;
             label7.Text = "Don't have an Account?";
-            label7.Click += label7_Click;
             // 
             // checkBox1
             // 
@@ -265,13 +262,13 @@
             checkBox1.BackColor = Color.Transparent;
             checkBox1.Font = new Font("Segoe UI", 13F);
             checkBox1.ForeColor = SystemColors.ControlLightLight;
-            checkBox1.Location = new Point(677, 377);
-            checkBox1.Margin = new Padding(3, 4, 3, 4);
+            checkBox1.Location = new Point(592, 283);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(184, 34);
+            checkBox1.Size = new Size(155, 29);
             checkBox1.TabIndex = 9;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = false;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // panel3
             // 
@@ -282,9 +279,8 @@
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(pictureBox2);
             panel3.Location = new Point(0, 0);
-            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(400, 575);
+            panel3.Size = new Size(350, 431);
             panel3.TabIndex = 8;
             // 
             // label8
@@ -294,9 +290,9 @@
             label8.FlatStyle = FlatStyle.Flat;
             label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(285, 547);
+            label8.Location = new Point(249, 410);
             label8.Name = "label8";
-            label8.Size = new Size(128, 22);
+            label8.Size = new Size(101, 18);
             label8.TabIndex = 1;
             label8.Text = "@BTENKS95";
             // 
@@ -305,10 +301,9 @@
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(-14, 423);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Location = new Point(-12, 317);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(245, 148);
+            pictureBox3.Size = new Size(214, 111);
             pictureBox3.TabIndex = 3;
             pictureBox3.TabStop = false;
             // 
@@ -319,10 +314,9 @@
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.ImageLocation = "";
             pictureBox2.InitialImage = Properties.Resources.R;
-            pictureBox2.Location = new Point(134, 4);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(117, 3);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(162, 173);
+            pictureBox2.Size = new Size(142, 130);
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
@@ -332,52 +326,35 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Papyrus", 18F, FontStyle.Bold | FontStyle.Italic);
             label10.ForeColor = SystemColors.ControlLightLight;
-            label10.Location = new Point(407, 13);
+            label10.Location = new Point(356, 10);
             label10.Name = "label10";
-            label10.Size = new Size(496, 48);
+            label10.Size = new Size(412, 38);
             label10.TabIndex = 5;
             label10.Text = "Welcome to Hit Acco Registration";
             // 
-            // textBox1
+            // Password
             // 
-            textBox1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            textBox1.Location = new Point(410, 303);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(443, 45);
-            textBox1.TabIndex = 7;
+            Password.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            Password.Location = new Point(359, 227);
+            Password.Multiline = true;
+            Password.Name = "Password";
+            Password.Size = new Size(388, 35);
+            Password.TabIndex = 7;
             // 
-            // button1
+            // Username
             // 
-            button1.BackColor = Color.MidnightBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(410, 531);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(198, 44);
-            button1.TabIndex = 1;
-            button1.Text = "Create New Account";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            textBox2.Location = new Point(410, 181);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(446, 45);
-            textBox2.TabIndex = 6;
+            Username.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            Username.Location = new Point(359, 136);
+            Username.Multiline = true;
+            Username.Name = "Username";
+            Username.Size = new Size(391, 35);
+            Username.TabIndex = 6;
             // 
             // label11
             // 
             label11.Location = new Point(0, 0);
             label11.Name = "label11";
-            label11.Size = new Size(114, 31);
+            label11.Size = new Size(100, 23);
             label11.TabIndex = 11;
             // 
             // button2
@@ -385,14 +362,12 @@
             button2.BackColor = Color.IndianRed;
             button2.Font = new Font("Segoe UI", 12F);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(786, 531);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(688, 398);
             button2.Name = "button2";
-            button2.Size = new Size(133, 44);
+            button2.Size = new Size(116, 33);
             button2.TabIndex = 2;
             button2.Text = "Exit";
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -400,10 +375,9 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 14F);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(410, 377);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(359, 283);
             button3.Name = "button3";
-            button3.Size = new Size(143, 45);
+            button3.Size = new Size(125, 34);
             button3.TabIndex = 0;
             button3.Text = "Login";
             button3.UseVisualStyleBackColor = false;
@@ -413,17 +387,30 @@
             // 
             label12.Location = new Point(0, 0);
             label12.Name = "label12";
-            label12.Size = new Size(114, 31);
+            label12.Size = new Size(100, 23);
             label12.TabIndex = 12;
+            // 
+            // Signupbtn
+            // 
+            Signupbtn.BackColor = Color.MidnightBlue;
+            Signupbtn.FlatStyle = FlatStyle.Flat;
+            Signupbtn.Font = new Font("Segoe UI", 14F);
+            Signupbtn.ForeColor = SystemColors.ControlLightLight;
+            Signupbtn.Location = new Point(359, 394);
+            Signupbtn.Name = "Signupbtn";
+            Signupbtn.Size = new Size(125, 34);
+            Signupbtn.TabIndex = 15;
+            Signupbtn.Text = "SignUp";
+            Signupbtn.UseVisualStyleBackColor = false;
+            Signupbtn.Click += Signupbtn_Click;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 573);
+            ClientSize = new Size(800, 430);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -462,9 +449,8 @@
         private PictureBox pictureBox2;
         private Label label8;
         private Label label10;
-        private TextBox textBox1;
-        private Button button1;
-        private TextBox textBox2;
+        private TextBox Password;
+        private TextBox Username;
         private Label label11;
         private Button button2;
         private Button button3;
@@ -472,5 +458,6 @@
         private PictureBox pictureBox3;
         private Label label14;
         private Label label13;
+        private Button Signupbtn;
     }
 }

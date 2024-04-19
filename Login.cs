@@ -1,7 +1,11 @@
+using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 namespace WinFormsApp1
 {
     public partial class Login : Form
     {
+        SqlConnection connection = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename=C:\\Users\\Tendai\\Documents\\LoginDB.mdf;Integrated Security = True; Connect Timeout = 30");
+
         public Login()
         {
             InitializeComponent();
@@ -11,31 +15,50 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Main_Menu Main = new Main_Menu();
-            Main.Show();
+            if (Username.Text != "" && Password.Text != "")
+            {
+                string query = "select count(*) from Registration_Table where username = '" + Username.Text + "' and " +
+                    "password='" + Password.Text + "'";
+                SqlCommand command = new SqlCommand(query, connection);
+                int v = (int)command.ExecuteScalar();
+                if (v != 1)
+                {
+                    MessageBox.Show("Password and username do not match!", "Incorect Data",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    connection.Close();
+                    MessageBox.Show("Welcome to Your account", "Welcome Student",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Main_Menu Main = new Main_Menu();
+                    Main.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill in all the Blanks!", "Empty sections Error!",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                Password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                Password.UseSystemPasswordChar = true;
+            }
+        }
+        private void Signupbtn_Click(object sender, EventArgs e)
+        {
+            CreateAccount CAcc = new();
+            CAcc.Show();
             this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CreateAccount sForm = new CreateAccount();
-            sForm.Show();
-            this.Hide();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
