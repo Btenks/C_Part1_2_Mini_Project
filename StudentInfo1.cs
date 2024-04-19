@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class ApplicationParent : Form
+    public partial class StudentInfo1 : Form
     {
-        public ApplicationParent()
+        public StudentInfo1()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
