@@ -10,29 +10,20 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class StudentInfo1 : Form
+    public partial class StudentHealthInfor : Form
     {
-        public StudentInfo1()
+        public StudentHealthInfor()
         {
             InitializeComponent();
         }
 
-        private void StudentInfo1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
-            // Create a new child form
-            StudentInfo2 Mwana2 = new StudentInfo2();
+            NEXTofKin1 Next = new NEXTofKin1();
            
-
             // Display the new child form
-            Mwana2.Show();
+            Next.Show();
             this.Close();
         }
     }
-    
 }

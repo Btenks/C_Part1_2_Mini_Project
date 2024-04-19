@@ -38,18 +38,20 @@
             // 
             // Logoutbtn
             // 
-            Logoutbtn.Location = new Point(64, 371);
+            Logoutbtn.Location = new Point(73, 495);
+            Logoutbtn.Margin = new Padding(3, 4, 3, 4);
             Logoutbtn.Name = "Logoutbtn";
-            Logoutbtn.Size = new Size(112, 50);
+            Logoutbtn.Size = new Size(128, 67);
             Logoutbtn.TabIndex = 1;
             Logoutbtn.Text = "Logout";
             Logoutbtn.UseVisualStyleBackColor = true;
             // 
             // ExitFromMainMenu
             // 
-            ExitFromMainMenu.Location = new Point(660, 371);
+            ExitFromMainMenu.Location = new Point(754, 495);
+            ExitFromMainMenu.Margin = new Padding(3, 4, 3, 4);
             ExitFromMainMenu.Name = "ExitFromMainMenu";
-            ExitFromMainMenu.Size = new Size(112, 50);
+            ExitFromMainMenu.Size = new Size(128, 67);
             ExitFromMainMenu.TabIndex = 2;
             ExitFromMainMenu.Text = "Exit";
             ExitFromMainMenu.UseVisualStyleBackColor = true;
@@ -57,27 +59,30 @@
             // 
             // Settingsbtn
             // 
-            Settingsbtn.Location = new Point(344, 272);
+            Settingsbtn.Location = new Point(393, 363);
+            Settingsbtn.Margin = new Padding(3, 4, 3, 4);
             Settingsbtn.Name = "Settingsbtn";
-            Settingsbtn.Size = new Size(112, 50);
+            Settingsbtn.Size = new Size(128, 67);
             Settingsbtn.TabIndex = 3;
             Settingsbtn.Text = "Account Settings";
             Settingsbtn.UseVisualStyleBackColor = true;
             // 
             // Explorebtn
             // 
-            Explorebtn.Location = new Point(344, 194);
+            Explorebtn.Location = new Point(393, 259);
+            Explorebtn.Margin = new Padding(3, 4, 3, 4);
             Explorebtn.Name = "Explorebtn";
-            Explorebtn.Size = new Size(112, 50);
+            Explorebtn.Size = new Size(128, 67);
             Explorebtn.TabIndex = 4;
             Explorebtn.Text = "Explore Hostels";
             Explorebtn.UseVisualStyleBackColor = true;
             // 
             // Registrationbtn
             // 
-            Registrationbtn.Location = new Point(344, 113);
+            Registrationbtn.Location = new Point(393, 151);
+            Registrationbtn.Margin = new Padding(3, 4, 3, 4);
             Registrationbtn.Name = "Registrationbtn";
-            Registrationbtn.Size = new Size(112, 50);
+            Registrationbtn.Size = new Size(128, 67);
             Registrationbtn.TabIndex = 5;
             Registrationbtn.Text = "Registration";
             Registrationbtn.UseVisualStyleBackColor = true;
@@ -86,25 +91,30 @@
             // Reglable
             // 
             Reglable.AutoSize = true;
-            Reglable.Location = new Point(317, 24);
+            Reglable.Location = new Point(362, 32);
             Reglable.Name = "Reglable";
-            Reglable.Size = new Size(155, 15);
+            Reglable.Size = new Size(194, 20);
             Reglable.TabIndex = 6;
             Reglable.Text = "HIT Registration Main Menu";
             // 
             // Main_Menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_48_00_d85f03d3;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(914, 600);
             Controls.Add(Reglable);
             Controls.Add(Registrationbtn);
             Controls.Add(Explorebtn);
             Controls.Add(Settingsbtn);
             Controls.Add(ExitFromMainMenu);
             Controls.Add(Logoutbtn);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Main_Menu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Main_Menu";
+            Load += Main_Menu_Load;
             ResumeLayout(false);
             PerformLayout();
         }

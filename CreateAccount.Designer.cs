@@ -76,7 +76,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 452);
             panel1.TabIndex = 10;
-            panel1.Paint += panel1_Paint;
             // 
             // Confirm_Password
             // 
@@ -246,7 +245,6 @@
             signup_hitmail.Name = "signup_hitmail";
             signup_hitmail.Size = new Size(391, 36);
             signup_hitmail.TabIndex = 6;
-            signup_hitmail.TextChanged += signup_hitmali_TextChanged;
             // 
             // label11
             // 

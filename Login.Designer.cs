@@ -54,7 +54,7 @@
             pictureBox2 = new PictureBox();
             label10 = new Label();
             textBox1 = new TextBox();
-            button1 = new Button();
+            Button1 = new Button();
             textBox2 = new TextBox();
             label11 = new Label();
             button2 = new Button();
@@ -209,7 +209,7 @@
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(Button1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(button2);
@@ -348,20 +348,20 @@
             textBox1.Size = new Size(443, 45);
             textBox1.TabIndex = 7;
             // 
-            // button1
+            // Button1
             // 
-            button1.BackColor = Color.MidnightBlue;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(410, 531);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(198, 44);
-            button1.TabIndex = 1;
-            button1.Text = "Create New Account";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            Button1.BackColor = Color.MidnightBlue;
+            Button1.FlatStyle = FlatStyle.Flat;
+            Button1.Font = new Font("Segoe UI", 12F);
+            Button1.ForeColor = SystemColors.ControlLightLight;
+            Button1.Location = new Point(410, 531);
+            Button1.Margin = new Padding(3, 4, 3, 4);
+            Button1.Name = "Button1";
+            Button1.Size = new Size(198, 44);
+            Button1.TabIndex = 1;
+            Button1.Text = "Create New Account";
+            Button1.UseVisualStyleBackColor = false;
+            Button1.Click += button1_Click;
             // 
             // textBox2
             // 
@@ -463,7 +463,7 @@
         private Label label8;
         private Label label10;
         private TextBox textBox1;
-        private Button button1;
+        private Button Button1;
         private TextBox textBox2;
         private Label label11;
         private Button button2;
