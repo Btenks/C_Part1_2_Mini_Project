@@ -29,21 +29,18 @@ namespace WinFormsApp1
             // Create a new child form
             StudentInfo1 Mwana1 = new StudentInfo1();
 
-            // Set the parent form of the child form to the main form
-            Mwana1.MdiParent = this;
-
-            // Define the offset value to adjust the vertical position of the child form
-            int offset = 200; // Adjust this value to your preference
-
-            // Calculate the desired Y-coordinate for the child form
-            int desiredY = (this.Height - Mwana1.Height) / 2 + offset;
-
-            // Set the location of the child form
-            Mwana1.Location = new Point((this.Width - Mwana1.Width) / 2, desiredY);
-
             // Display the child form
             Mwana1.Show();
             Button1.Visible = false;
+            this.Close();
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            Main_Menu qwerty = new Main_Menu();
+            
+            qwerty.Show();
+            this.Close();
         }
     }
 }

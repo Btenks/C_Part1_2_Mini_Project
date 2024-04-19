@@ -41,16 +41,19 @@
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             label6 = new Label();
+            textBox5 = new TextBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(213, 335);
+            button1.Location = new Point(273, 383);
             button1.Name = "button1";
-            button1.Size = new Size(106, 26);
+            button1.Size = new Size(106, 39);
             button1.TabIndex = 0;
-            button1.Text = "button1";
+            button1.Text = "NEXT ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -64,7 +67,7 @@
             // 
             Label1.AutoSize = true;
             Label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label1.Location = new Point(182, 19);
+            Label1.Location = new Point(195, 19);
             Label1.Name = "Label1";
             Label1.Size = new Size(249, 22);
             Label1.TabIndex = 2;
@@ -137,7 +140,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(537, 199);
+            radioButton1.Location = new Point(532, 204);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(88, 22);
             radioButton1.TabIndex = 10;
@@ -148,7 +151,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(537, 137);
+            radioButton2.Location = new Point(532, 156);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(71, 22);
             radioButton2.TabIndex = 11;
@@ -160,18 +163,38 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(553, 83);
+            label6.Location = new Point(532, 116);
             label6.Name = "label6";
             label6.Size = new Size(89, 22);
             label6.TabIndex = 12;
             label6.Text = "GENDER";
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox5.Location = new Point(239, 297);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(205, 31);
+            textBox5.TabIndex = 29;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(43, 306);
+            label7.Name = "label7";
+            label7.Size = new Size(160, 22);
+            label7.TabIndex = 28;
+            label7.Text = "HOME ADDRESS";
             // 
             // StudentInfo1
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(751, 392);
+            ClientSize = new Size(707, 445);
+            Controls.Add(textBox5);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
@@ -209,5 +232,7 @@
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private Label label6;
+        private TextBox textBox5;
+        private Label label7;
     }
 }

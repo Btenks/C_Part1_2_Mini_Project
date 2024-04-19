@@ -29,5 +29,10 @@ namespace WinFormsApp1
             Parent.Show();
             this.Hide();
         }
+
+        private void Main_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
