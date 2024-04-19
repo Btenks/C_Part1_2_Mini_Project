@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            PictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -44,16 +44,16 @@
             label1.Text = "HARARE INSTITUTE OF TECHNOLOGY \r\n       RESIDENTIAL APPLICATION \r\n";
             label1.Click += label1_Click;
             // 
-            // pictureBox1
+            // PictureBox1
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_47_59_57cbd009;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(1, -2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(301, 165);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            PictureBox1.BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_47_59_57cbd009;
+            PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            PictureBox1.Location = new Point(1, -2);
+            PictureBox1.Name = "PictureBox1";
+            PictureBox1.Size = new Size(301, 165);
+            PictureBox1.TabIndex = 1;
+            PictureBox1.TabStop = false;
+            PictureBox1.Click += pictureBox1_Click;
             // 
             // ApplicationParent
             // 
@@ -62,14 +62,14 @@
             BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_48_00_d85f03d3;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1117, 764);
-            Controls.Add(pictureBox1);
+            Controls.Add(PictureBox1);
             Controls.Add(label1);
             Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "ApplicationParent";
             StartPosition = FormStartPosition.WindowsDefaultBounds;
             Text = "ApplicationParent";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -77,6 +77,6 @@
         #endregion
 
         private Label label1;
-        private PictureBox pictureBox1;
+        private PictureBox PictureBox1;
     }
 }
