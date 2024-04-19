@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class ApplicationParent
+    partial class ApplicationMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,43 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            Label1 = new Label();
             PictureBox1 = new PictureBox();
+            Button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // Label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Stencil", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(473, 36);
-            label1.Name = "label1";
-            label1.Size = new Size(545, 70);
-            label1.TabIndex = 0;
-            label1.Text = "HARARE INSTITUTE OF TECHNOLOGY \r\n       RESIDENTIAL APPLICATION \r\n";
+            Label1.AutoSize = true;
+            Label1.Font = new Font("Stencil", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label1.Location = new Point(459, 32);
+            Label1.Name = "Label1";
+            Label1.Size = new Size(604, 80);
+            Label1.TabIndex = 0;
+            Label1.Text = "HARARE INSTITUTE OF TECHNOLOGY\r\n          RESIDENTIAL APPLICATION ";
             // 
             // PictureBox1
             // 
             PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            PictureBox1.Location = new Point(1, -2);
+            PictureBox1.Location = new Point(-3, -1);
             PictureBox1.Name = "PictureBox1";
-            PictureBox1.Size = new Size(301, 165);
+            PictureBox1.Size = new Size(262, 148);
             PictureBox1.TabIndex = 1;
             PictureBox1.TabStop = false;
             // 
-            // ApplicationParent
+            // Button1
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            Button1.BackColor = SystemColors.ActiveCaption;
+            Button1.Location = new Point(399, 364);
+            Button1.Name = "Button1";
+            Button1.Size = new Size(286, 85);
+            Button1.TabIndex = 3;
+            Button1.Text = "apply now ";
+            Button1.UseVisualStyleBackColor = false;
+            Button1.Click += Button1_Click;
+            // 
+            // ApplicationMenu
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
+            BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_48_00_d85f03d3;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1117, 764);
+            ClientSize = new Size(1099, 745);
+            Controls.Add(Button1);
             Controls.Add(PictureBox1);
-            Controls.Add(label1);
-            Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "ApplicationParent";
-            StartPosition = FormStartPosition.WindowsDefaultBounds;
-            Text = "ApplicationParent";
+            Controls.Add(Label1);
+            IsMdiContainer = true;
+            Name = "ApplicationMenu";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ApplicationMenu";
+            Load += ApplicationMenu_Load;
             ((System.ComponentModel.ISupportInitialize)PictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -72,7 +87,8 @@
 
         #endregion
 
-        private Label label1;
+        private Label Label1;
         private PictureBox PictureBox1;
+        private Button Button1;
     }
 }
