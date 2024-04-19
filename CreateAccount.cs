@@ -81,20 +81,33 @@ namespace WinFormsApp1
                                MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch(Exception ex)    
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
         int check(string Hitmail)
-            {
+        {
             connection.Open();
             string query = "select count(*) from Registration_Table where Hitmail ='" + Hitmail + "'";
             SqlCommand command = new SqlCommand(query, connection);
             int v = (int)command.ExecuteScalar();
             connection.Close();
             return v;
-            }
+        }
 
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox3.Checked)
+            {
+                signup_password.UseSystemPasswordChar = false;
+                Confirm_Password.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                signup_password.UseSystemPasswordChar = true;
+                Confirm_Password.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

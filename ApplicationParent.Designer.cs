@@ -42,24 +42,20 @@
             label1.Size = new Size(545, 70);
             label1.TabIndex = 0;
             label1.Text = "HARARE INSTITUTE OF TECHNOLOGY \r\n       RESIDENTIAL APPLICATION \r\n";
-            label1.Click += label1_Click;
             // 
             // PictureBox1
             // 
-            PictureBox1.BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_47_59_57cbd009;
             PictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             PictureBox1.Location = new Point(1, -2);
             PictureBox1.Name = "PictureBox1";
             PictureBox1.Size = new Size(301, 165);
             PictureBox1.TabIndex = 1;
             PictureBox1.TabStop = false;
-            PictureBox1.Click += pictureBox1_Click;
             // 
             // ApplicationParent
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_48_00_d85f03d3;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1117, 764);
             Controls.Add(PictureBox1);

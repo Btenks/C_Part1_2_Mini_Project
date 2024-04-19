@@ -35,7 +35,6 @@
             checkBox3 = new CheckBox();
             signup_password = new TextBox();
             label1 = new Label();
-            checkBox1 = new CheckBox();
             panel3 = new Panel();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -63,7 +62,6 @@
             panel1.Controls.Add(checkBox3);
             panel1.Controls.Add(signup_password);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(signup_username);
@@ -76,7 +74,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 452);
             panel1.TabIndex = 10;
-            panel1.Paint += panel1_Paint;
             // 
             // Confirm_Password
             // 
@@ -84,8 +81,10 @@
             Confirm_Password.Location = new Point(356, 282);
             Confirm_Password.Multiline = true;
             Confirm_Password.Name = "Confirm_Password";
+            Confirm_Password.PasswordChar = '*';
             Confirm_Password.Size = new Size(388, 38);
             Confirm_Password.TabIndex = 16;
+            Confirm_Password.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -111,6 +110,7 @@
             checkBox3.TabIndex = 14;
             checkBox3.Text = "Show Password";
             checkBox3.UseVisualStyleBackColor = false;
+            checkBox3.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // signup_password
             // 
@@ -118,8 +118,10 @@
             signup_password.Location = new Point(359, 207);
             signup_password.Multiline = true;
             signup_password.Name = "signup_password";
+            signup_password.PasswordChar = '*';
             signup_password.Size = new Size(388, 38);
             signup_password.TabIndex = 12;
+            signup_password.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -132,19 +134,6 @@
             label1.Size = new Size(86, 25);
             label1.TabIndex = 11;
             label1.Text = "Password";
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.BackColor = Color.Transparent;
-            checkBox1.Font = new Font("Segoe UI", 12F);
-            checkBox1.ForeColor = SystemColors.ControlLightLight;
-            checkBox1.Location = new Point(618, 251);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(138, 25);
-            checkBox1.TabIndex = 9;
-            checkBox1.Text = "Show Password";
-            checkBox1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -246,7 +235,6 @@
             signup_hitmail.Name = "signup_hitmail";
             signup_hitmail.Size = new Size(391, 36);
             signup_hitmail.TabIndex = 6;
-            signup_hitmail.TextChanged += signup_hitmali_TextChanged;
             // 
             // label11
             // 
@@ -307,7 +295,6 @@
         #endregion
 
         private Panel panel1;
-        private CheckBox checkBox1;
         private Panel panel3;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
