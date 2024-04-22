@@ -13,7 +13,7 @@ namespace WinFormsApp1
 
 
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             if (Username.Text != "" && Password.Text != "")
             {
@@ -43,7 +43,7 @@ namespace WinFormsApp1
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
@@ -61,7 +61,7 @@ namespace WinFormsApp1
             this.Hide();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void Label9_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
