@@ -4,7 +4,7 @@ namespace WinFormsApp1
 {
     public partial class Login : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename=C:\\Users\\Tendai\\Documents\\LoginDB.mdf;Integrated Security = True; Connect Timeout = 30");
+        SqlConnection connection = new SqlConnection("Data Source = (Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Tendai\\source\\repos\\WinFormsApp1\\obj\\Debug\\net8.0-windows\\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
 
         public Login()
         {
@@ -29,7 +29,7 @@ namespace WinFormsApp1
                 else
                 {
                     connection.Close();
-                    MessageBox.Show("Welcome to Your account", "Welcome Student",
+                    _ = MessageBox.Show("Welcome to Your account", "Welcome Student",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Main_Menu Main_M = new Main_Menu();

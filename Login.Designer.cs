@@ -282,7 +282,7 @@
             checkBox1.TabIndex = 9;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = false;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
             // 
             // panel3
             // 
@@ -383,7 +383,7 @@
             button3.TabIndex = 0;
             button3.Text = "Login";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            button3.Click += Button3_Click;
             // 
             // label12
             // 
@@ -403,7 +403,7 @@
             label9.Size = new Size(24, 25);
             label9.TabIndex = 18;
             label9.Text = "X";
-            label9.Click += label9_Click;
+            label9.Click += Label9_Click;
             // 
             // Login
             // 
