@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class CreateAccount
+    partial class Signup
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             panel1 = new Panel();
+            label3 = new Label();
             Confirm_Password = new TextBox();
             label2 = new Label();
             checkBox3 = new CheckBox();
@@ -57,6 +58,7 @@
             // 
             panel1.BackColor = SystemColors.MenuText;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(Confirm_Password);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(checkBox3);
@@ -70,10 +72,23 @@
             panel1.Controls.Add(label11);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(label12);
-            panel1.Location = new Point(-1, 0);
+            panel1.Location = new Point(-1, -1);
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 452);
-            panel1.TabIndex = 10;
+            panel1.TabIndex = 11;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.IndianRed;
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(776, 3);
+            label3.Name = "label3";
+            label3.Size = new Size(24, 25);
+            label3.TabIndex = 17;
+            label3.Text = "X";
+            label3.Click += label3_Click;
             // 
             // Confirm_Password
             // 
@@ -202,7 +217,6 @@
             label10.Size = new Size(166, 38);
             label10.TabIndex = 5;
             label10.Text = "Get Started";
-            label10.Click += label10_Click;
             // 
             // signup_username
             // 
@@ -254,9 +268,9 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 14F);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(631, 399);
+            button3.Location = new Point(618, 399);
             button3.Name = "button3";
-            button3.Size = new Size(125, 39);
+            button3.Size = new Size(138, 39);
             button3.TabIndex = 0;
             button3.Text = "Back to Login";
             button3.UseVisualStyleBackColor = false;
@@ -274,15 +288,18 @@
             label12.TabIndex = 3;
             label12.Text = "Hitmail Address";
             // 
-            // CreateAccount
+            // Signup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CreateAccount";
-            Text = "CreateAccount";
+            Name = "Signup";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Signup";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
@@ -295,6 +312,11 @@
         #endregion
 
         private Panel panel1;
+        private TextBox Confirm_Password;
+        private Label label2;
+        private CheckBox checkBox3;
+        private TextBox signup_password;
+        private Label label1;
         private Panel panel3;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
@@ -307,10 +329,6 @@
         private Label label11;
         private Button button3;
         private Label label12;
-        private TextBox signup_password;
-        private Label label1;
-        private TextBox Confirm_Password;
-        private Label label2;
-        private CheckBox checkBox3;
+        private Label label3;
     }
 }

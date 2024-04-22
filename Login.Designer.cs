@@ -44,6 +44,7 @@
             ShowPasswordchk = new CheckBox();
             label4 = new Label();
             panel1 = new Panel();
+            Signupbtn = new Button();
             label14 = new Label();
             label13 = new Label();
             label7 = new Label();
@@ -56,10 +57,9 @@
             Password = new TextBox();
             Username = new TextBox();
             label11 = new Label();
-            button2 = new Button();
             button3 = new Button();
             label12 = new Label();
-            Signupbtn = new Button();
+            label9 = new Label();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -202,6 +202,7 @@
             // 
             panel1.BackColor = SystemColors.MenuText;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(label9);
             panel1.Controls.Add(Signupbtn);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label13);
@@ -212,13 +213,26 @@
             panel1.Controls.Add(Password);
             panel1.Controls.Add(Username);
             panel1.Controls.Add(label11);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(label12);
             panel1.Location = new Point(-1, -2);
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 434);
             panel1.TabIndex = 9;
+            // 
+            // Signupbtn
+            // 
+            Signupbtn.BackColor = Color.MidnightBlue;
+            Signupbtn.FlatStyle = FlatStyle.Flat;
+            Signupbtn.Font = new Font("Segoe UI", 14F);
+            Signupbtn.ForeColor = SystemColors.ControlLightLight;
+            Signupbtn.Location = new Point(622, 386);
+            Signupbtn.Name = "Signupbtn";
+            Signupbtn.Size = new Size(125, 34);
+            Signupbtn.TabIndex = 15;
+            Signupbtn.Text = "SignUp";
+            Signupbtn.UseVisualStyleBackColor = false;
+            Signupbtn.Click += Signupbtn_Click;
             // 
             // label14
             // 
@@ -250,7 +264,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Papyrus", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(359, 371);
+            label7.Location = new Point(592, 355);
             label7.Name = "label7";
             label7.Size = new Size(188, 24);
             label7.TabIndex = 10;
@@ -357,25 +371,13 @@
             label11.Size = new Size(100, 23);
             label11.TabIndex = 11;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.IndianRed;
-            button2.Font = new Font("Segoe UI", 12F);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(688, 398);
-            button2.Name = "button2";
-            button2.Size = new Size(116, 33);
-            button2.TabIndex = 2;
-            button2.Text = "Exit";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // button3
             // 
             button3.BackColor = Color.MidnightBlue;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 14F);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(359, 283);
+            button3.Location = new Point(356, 386);
             button3.Name = "button3";
             button3.Size = new Size(125, 34);
             button3.TabIndex = 0;
@@ -390,19 +392,18 @@
             label12.Size = new Size(100, 23);
             label12.TabIndex = 12;
             // 
-            // Signupbtn
+            // label9
             // 
-            Signupbtn.BackColor = Color.MidnightBlue;
-            Signupbtn.FlatStyle = FlatStyle.Flat;
-            Signupbtn.Font = new Font("Segoe UI", 14F);
-            Signupbtn.ForeColor = SystemColors.ControlLightLight;
-            Signupbtn.Location = new Point(359, 394);
-            Signupbtn.Name = "Signupbtn";
-            Signupbtn.Size = new Size(125, 34);
-            Signupbtn.TabIndex = 15;
-            Signupbtn.Text = "SignUp";
-            Signupbtn.UseVisualStyleBackColor = false;
-            Signupbtn.Click += Signupbtn_Click;
+            label9.AutoSize = true;
+            label9.BackColor = Color.IndianRed;
+            label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = SystemColors.ButtonHighlight;
+            label9.Location = new Point(779, 0);
+            label9.Name = "label9";
+            label9.Size = new Size(24, 25);
+            label9.TabIndex = 18;
+            label9.Text = "X";
+            label9.Click += label9_Click;
             // 
             // Login
             // 
@@ -452,12 +453,12 @@
         private TextBox Password;
         private TextBox Username;
         private Label label11;
-        private Button button2;
         private Button button3;
         private Label label12;
         private PictureBox pictureBox3;
         private Label label14;
         private Label label13;
         private Button Signupbtn;
+        private Label label9;
     }
 }

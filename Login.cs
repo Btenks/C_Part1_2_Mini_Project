@@ -32,8 +32,8 @@ namespace WinFormsApp1
                     MessageBox.Show("Welcome to Your account", "Welcome Student",
                                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Main_Menu Main = new Main_Menu();
-                    Main.Show();
+                    Main_Menu Main_M = new Main_Menu();
+                    Main_M.Show();
                     this.Hide();
                 }
             }
@@ -56,9 +56,14 @@ namespace WinFormsApp1
         }
         private void Signupbtn_Click(object sender, EventArgs e)
         {
-            CreateAccount CAcc = new();
+            Signup CAcc = new();
             CAcc.Show();
             this.Hide();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
