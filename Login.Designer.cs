@@ -232,7 +232,7 @@
             Signupbtn.TabIndex = 15;
             Signupbtn.Text = "SignUp";
             Signupbtn.UseVisualStyleBackColor = false;
-            Signupbtn.Click += Signupbtn_Click;
+           // Signupbtn.Click += Signupbtn_Click;
             // 
             // label14
             // 
@@ -282,7 +282,7 @@
             checkBox1.TabIndex = 9;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = false;
-            checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
+          //  checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
             // 
             // panel3
             // 
@@ -403,7 +403,7 @@
             label9.Size = new Size(24, 25);
             label9.TabIndex = 18;
             label9.Text = "X";
-            label9.Click += Label9_Click;
+           // label9.Click += Label9_Click;
             // 
             // Login
             // 

@@ -12,10 +12,10 @@ namespace WinFormsApp1
         }
 
 
-
+         
         private void Button3_Click(object sender, EventArgs e)
-        {
-            if (Username.Text != "" && Password.Text != "")
+        {/*
+                if (Username.Text != "" && Password.Text != "")
             {
                 string query = "select count(*) from Registration_Table where username = '" + Username.Text + "' and " +
                     "password='" + Password.Text + "'";
@@ -30,14 +30,18 @@ namespace WinFormsApp1
                 {
                     connection.Close();
                     _ = MessageBox.Show("Welcome to Your account", "Welcome Student",
-                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);             */
 
-                    Main_Menu Main_M = new Main_Menu();
-                    Main_M.Show();
-                    this.Hide();
-                }
-            }
-            else
+            Main_Menu Main_M = new Main_Menu();
+            Main_M.Show();
+            this.Hide();
+
+        }
+    }
+}
+           
+            /*
+           else
             {
                 MessageBox.Show("Please fill in all the Blanks!", "Empty sections Error!",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,3 +71,4 @@ namespace WinFormsApp1
         }
     }
 }
+            */                                              
