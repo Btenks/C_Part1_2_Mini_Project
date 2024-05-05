@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account_Settings));
             panel1 = new Panel();
+            label1 = new Label();
+            NewPassword = new TextBox();
             label9 = new Label();
-            Signupbtn = new Button();
+            btnSaveChanges = new Button();
             label14 = new Label();
             label13 = new Label();
             checkBox1 = new CheckBox();
@@ -40,7 +42,7 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             label10 = new Label();
-            Password = new TextBox();
+            OldPassword = new TextBox();
             Username = new TextBox();
             label11 = new Label();
             button3 = new Button();
@@ -55,14 +57,16 @@
             // 
             panel1.BackColor = SystemColors.MenuText;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(NewPassword);
             panel1.Controls.Add(label9);
-            panel1.Controls.Add(Signupbtn);
+            panel1.Controls.Add(btnSaveChanges);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label13);
             panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(label10);
-            panel1.Controls.Add(Password);
+            panel1.Controls.Add(OldPassword);
             panel1.Controls.Add(Username);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(button3);
@@ -71,6 +75,29 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 497);
             panel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Papyrus", 14.25F, FontStyle.Bold | FontStyle.Italic);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(352, 256);
+            label1.Name = "label1";
+            label1.Size = new Size(144, 30);
+            label1.TabIndex = 20;
+            label1.Text = "New Password";
+            // 
+            // NewPassword
+            // 
+            NewPassword.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            NewPassword.Location = new Point(353, 306);
+            NewPassword.Multiline = true;
+            NewPassword.Name = "NewPassword";
+            NewPassword.PasswordChar = '*';
+            NewPassword.Size = new Size(430, 35);
+            NewPassword.TabIndex = 19;
+            NewPassword.UseSystemPasswordChar = true;
             // 
             // label9
             // 
@@ -84,18 +111,19 @@
             label9.TabIndex = 18;
             label9.Text = "X";
             // 
-            // Signupbtn
+            // btnSaveChanges
             // 
-            Signupbtn.BackColor = Color.MidnightBlue;
-            Signupbtn.FlatStyle = FlatStyle.Flat;
-            Signupbtn.Font = new Font("Segoe UI", 14F);
-            Signupbtn.ForeColor = SystemColors.ControlLightLight;
-            Signupbtn.Location = new Point(628, 436);
-            Signupbtn.Name = "Signupbtn";
-            Signupbtn.Size = new Size(172, 55);
-            Signupbtn.TabIndex = 15;
-            Signupbtn.Text = "Confirm Changes";
-            Signupbtn.UseVisualStyleBackColor = false;
+            btnSaveChanges.BackColor = Color.MidnightBlue;
+            btnSaveChanges.FlatStyle = FlatStyle.Flat;
+            btnSaveChanges.Font = new Font("Segoe UI", 14F);
+            btnSaveChanges.ForeColor = SystemColors.ControlLightLight;
+            btnSaveChanges.Location = new Point(628, 436);
+            btnSaveChanges.Name = "btnSaveChanges";
+            btnSaveChanges.Size = new Size(172, 55);
+            btnSaveChanges.TabIndex = 15;
+            btnSaveChanges.Text = "Save Changes";
+            btnSaveChanges.UseVisualStyleBackColor = false;
+            btnSaveChanges.Click += btnSaveChanges_Click;
             // 
             // label14
             // 
@@ -115,7 +143,7 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Papyrus", 14.25F, FontStyle.Bold | FontStyle.Italic);
             label13.ForeColor = SystemColors.ControlLightLight;
-            label13.Location = new Point(356, 158);
+            label13.Location = new Point(353, 161);
             label13.Name = "label13";
             label13.Size = new Size(140, 30);
             label13.TabIndex = 13;
@@ -133,6 +161,7 @@
             checkBox1.TabIndex = 9;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = false;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // panel3
             // 
@@ -174,11 +203,11 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = Properties.Resources.OIP;
+            pictureBox2.BackgroundImage = Properties.Resources.unnamed;
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.ImageLocation = "";
             pictureBox2.InitialImage = Properties.Resources.R;
-            pictureBox2.Location = new Point(117, 3);
+            pictureBox2.Location = new Point(109, 26);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(142, 130);
             pictureBox2.TabIndex = 2;
@@ -190,25 +219,27 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Papyrus", 18F, FontStyle.Bold | FontStyle.Italic);
             label10.ForeColor = SystemColors.ControlLightLight;
-            label10.Location = new Point(356, 10);
+            label10.Location = new Point(552, 1);
             label10.Name = "label10";
-            label10.Size = new Size(412, 38);
+            label10.Size = new Size(120, 38);
             label10.TabIndex = 5;
-            label10.Text = "Welcome to Hit Acco Registration";
+            label10.Text = "Settings";
             // 
-            // Password
+            // OldPassword
             // 
-            Password.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            Password.Location = new Point(353, 200);
-            Password.Multiline = true;
-            Password.Name = "Password";
-            Password.Size = new Size(430, 35);
-            Password.TabIndex = 7;
+            OldPassword.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            OldPassword.Location = new Point(353, 206);
+            OldPassword.Multiline = true;
+            OldPassword.Name = "OldPassword";
+            OldPassword.PasswordChar = '*';
+            OldPassword.Size = new Size(430, 35);
+            OldPassword.TabIndex = 7;
+            OldPassword.UseSystemPasswordChar = true;
             // 
             // Username
             // 
             Username.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            Username.Location = new Point(359, 107);
+            Username.Location = new Point(350, 107);
             Username.Multiline = true;
             Username.Name = "Username";
             Username.Size = new Size(433, 35);
@@ -233,7 +264,6 @@
             button3.TabIndex = 0;
             button3.Text = "Back to Main Menu";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
             // 
             // label12
             // 
@@ -248,6 +278,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 496);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Account_Settings";
             Text = "Account_Settings";
             panel1.ResumeLayout(false);
@@ -263,7 +294,7 @@
 
         private Panel panel1;
         private Label label9;
-        private Button Signupbtn;
+        private Button btnSaveChanges;
         private Label label14;
         private Label label13;
         private CheckBox checkBox1;
@@ -272,10 +303,12 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Label label10;
-        private TextBox Password;
+        private TextBox OldPassword;
         private TextBox Username;
         private Label label11;
         private Button button3;
         private Label label12;
+        private Label label1;
+        private TextBox NewPassword;
     }
 }

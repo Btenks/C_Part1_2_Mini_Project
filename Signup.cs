@@ -78,20 +78,11 @@ namespace WinFormsApp1
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox3.Checked)
-            {
-                signup_password.UseSystemPasswordChar = false;
-                Confirm_Password.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                signup_password.UseSystemPasswordChar = true;
-                Confirm_Password.UseSystemPasswordChar = true;
-            }
+            signup_password.UseSystemPasswordChar = !checkBox3.Checked;
+            Confirm_Password.UseSystemPasswordChar = !checkBox3.Checked;
         }
- 
 
-        private void button3_Click(object sender, EventArgs e)
+            private void button3_Click(object sender, EventArgs e)
             {
                 Login sForm = new Login();
                 sForm.Show();

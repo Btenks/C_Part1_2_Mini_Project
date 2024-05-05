@@ -99,7 +99,6 @@
             Confirm_Password.PasswordChar = '*';
             Confirm_Password.Size = new Size(388, 38);
             Confirm_Password.TabIndex = 16;
-            Confirm_Password.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -136,7 +135,6 @@
             signup_password.PasswordChar = '*';
             signup_password.Size = new Size(388, 38);
             signup_password.TabIndex = 12;
-            signup_password.UseSystemPasswordChar = true;
             // 
             // label1
             // 

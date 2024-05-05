@@ -245,7 +245,6 @@
             Signupbtn.TabIndex = 15;
             Signupbtn.Text = "SignUp";
             Signupbtn.UseVisualStyleBackColor = false;
-           // Signupbtn.Click += Signupbtn_Click;
             // 
             // label14
             // 
@@ -295,7 +294,7 @@
             checkBox1.TabIndex = 9;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = false;
-          //  checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged_1;
             // 
             // panel3
             // 
