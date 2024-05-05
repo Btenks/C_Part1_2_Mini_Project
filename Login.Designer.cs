@@ -50,7 +50,6 @@
             label13 = new Label();
             label7 = new Label();
             checkBox1 = new CheckBox();
-            panel3 = new Panel();
             label8 = new Label();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -63,7 +62,6 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -200,24 +198,27 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.MenuText;
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.BackColor = Color.Indigo;
+            panel1.BackgroundImage = Properties.Resources.images1;
+            panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(label8);
             panel1.Controls.Add(label9);
+            panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(Signupbtn);
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(label14);
             panel1.Controls.Add(label13);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(checkBox1);
-            panel1.Controls.Add(panel3);
             panel1.Controls.Add(label10);
             panel1.Controls.Add(Password);
             panel1.Controls.Add(Username);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(label12);
-            panel1.Location = new Point(-1, -2);
+            panel1.Location = new Point(-4, -1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(803, 434);
+            panel1.Size = new Size(669, 434);
             panel1.TabIndex = 9;
             // 
             // label9
@@ -226,7 +227,7 @@
             label9.BackColor = Color.IndianRed;
             label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.ButtonHighlight;
-            label9.Location = new Point(779, 0);
+            label9.Location = new Point(765, 0);
             label9.Name = "label9";
             label9.Size = new Size(24, 25);
             label9.TabIndex = 18;
@@ -239,7 +240,7 @@
             Signupbtn.FlatStyle = FlatStyle.Flat;
             Signupbtn.Font = new Font("Segoe UI", 14F);
             Signupbtn.ForeColor = SystemColors.ControlLightLight;
-            Signupbtn.Location = new Point(622, 386);
+            Signupbtn.Location = new Point(525, 386);
             Signupbtn.Name = "Signupbtn";
             Signupbtn.Size = new Size(125, 34);
             Signupbtn.TabIndex = 15;
@@ -252,7 +253,7 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Papyrus", 14.25F, FontStyle.Bold | FontStyle.Italic);
             label14.ForeColor = SystemColors.ControlLightLight;
-            label14.Location = new Point(359, 103);
+            label14.Location = new Point(362, 93);
             label14.Name = "label14";
             label14.Size = new Size(105, 30);
             label14.TabIndex = 14;
@@ -264,7 +265,7 @@
             label13.BackColor = Color.Transparent;
             label13.Font = new Font("Papyrus", 14.25F, FontStyle.Bold | FontStyle.Italic);
             label13.ForeColor = SystemColors.ControlLightLight;
-            label13.Location = new Point(359, 194);
+            label13.Location = new Point(370, 184);
             label13.Name = "label13";
             label13.Size = new Size(97, 30);
             label13.TabIndex = 13;
@@ -276,7 +277,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Papyrus", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(592, 355);
+            label7.Location = new Point(462, 336);
             label7.Name = "label7";
             label7.Size = new Size(188, 24);
             label7.TabIndex = 10;
@@ -288,26 +289,13 @@
             checkBox1.BackColor = Color.Transparent;
             checkBox1.Font = new Font("Segoe UI", 13F);
             checkBox1.ForeColor = SystemColors.ControlLightLight;
-            checkBox1.Location = new Point(592, 283);
+            checkBox1.Location = new Point(341, 269);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(155, 29);
             checkBox1.TabIndex = 9;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = false;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged_1;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Indigo;
-            panel3.BackgroundImage = Properties.Resources.istockphoto;
-            panel3.BackgroundImageLayout = ImageLayout.Stretch;
-            panel3.Controls.Add(label8);
-            panel3.Controls.Add(pictureBox3);
-            panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(350, 431);
-            panel3.TabIndex = 8;
             // 
             // label8
             // 
@@ -316,7 +304,7 @@
             label8.FlatStyle = FlatStyle.Flat;
             label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(249, 410);
+            label8.Location = new Point(395, 402);
             label8.Name = "label8";
             label8.Size = new Size(101, 18);
             label8.TabIndex = 1;
@@ -327,7 +315,7 @@
             pictureBox3.BackColor = Color.Transparent;
             pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(-12, 317);
+            pictureBox3.Location = new Point(13, 309);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(214, 111);
             pictureBox3.TabIndex = 3;
@@ -340,7 +328,7 @@
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox2.ImageLocation = "";
             pictureBox2.InitialImage = Properties.Resources.R;
-            pictureBox2.Location = new Point(117, 3);
+            pictureBox2.Location = new Point(13, 10);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(142, 130);
             pictureBox2.TabIndex = 2;
@@ -352,7 +340,7 @@
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Papyrus", 18F, FontStyle.Bold | FontStyle.Italic);
             label10.ForeColor = SystemColors.ControlLightLight;
-            label10.Location = new Point(356, 10);
+            label10.Location = new Point(161, 0);
             label10.Name = "label10";
             label10.Size = new Size(412, 38);
             label10.TabIndex = 5;
@@ -361,21 +349,21 @@
             // Password
             // 
             Password.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            Password.Location = new Point(359, 227);
+            Password.Location = new Point(131, 228);
             Password.Multiline = true;
             Password.Name = "Password";
             Password.PasswordChar = '*';
-            Password.Size = new Size(388, 35);
+            Password.Size = new Size(519, 35);
             Password.TabIndex = 7;
             Password.UseSystemPasswordChar = true;
             // 
             // Username
             // 
             Username.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            Username.Location = new Point(359, 136);
+            Username.Location = new Point(128, 146);
             Username.Multiline = true;
             Username.Name = "Username";
-            Username.Size = new Size(391, 35);
+            Username.Size = new Size(522, 35);
             Username.TabIndex = 6;
             // 
             // label11
@@ -391,7 +379,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 14F);
             button3.ForeColor = SystemColors.ControlLightLight;
-            button3.Location = new Point(356, 386);
+            button3.Location = new Point(233, 389);
             button3.Name = "button3";
             button3.Size = new Size(125, 34);
             button3.TabIndex = 0;
@@ -410,19 +398,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 430);
+            ClientSize = new Size(663, 430);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
@@ -447,7 +434,6 @@
         private Panel panel1;
         private Label label7;
         private CheckBox checkBox1;
-        private Panel panel3;
         private PictureBox pictureBox2;
         private Label label8;
         private Label label10;

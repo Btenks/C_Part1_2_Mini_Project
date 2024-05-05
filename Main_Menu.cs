@@ -34,5 +34,25 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void Logoutbtn_Click(object sender, EventArgs e)
+        {
+            Login sForm = new Login();
+            sForm.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Account_Settings showForm = new Account_Settings();
+            showForm.Show();
+            this.Hide();
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

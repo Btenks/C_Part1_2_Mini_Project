@@ -74,5 +74,10 @@ namespace WinFormsApp1
         {
             Password.UseSystemPasswordChar = !checkBox1.Checked;
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }                                      
