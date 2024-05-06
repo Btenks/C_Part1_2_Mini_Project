@@ -31,6 +31,7 @@
             Label1 = new Label();
             PictureBox1 = new PictureBox();
             Button1 = new Button();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)PictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -68,6 +69,18 @@
             Button1.UseVisualStyleBackColor = false;
             Button1.Click += Button1_Click;
             // 
+            // button2
+            // 
+            button2.BackColor = SystemColors.ActiveCaption;
+            button2.Location = new Point(349, 381);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(250, 64);
+            button2.TabIndex = 4;
+            button2.Text = "View Status";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // ApplicationMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -76,6 +89,7 @@
             BackgroundImage = Properties.Resources.WhatsApp_Image_2024_04_19_at_00_48_00_d85f03d3;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(962, 559);
+            Controls.Add(button2);
             Controls.Add(Label1);
             Controls.Add(Button1);
             Controls.Add(PictureBox1);
@@ -94,5 +108,6 @@
         private Label Label1;
         private PictureBox PictureBox1;
         private Button Button1;
+        private Button button2;
     }
 }

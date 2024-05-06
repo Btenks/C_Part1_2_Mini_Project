@@ -38,8 +38,16 @@ namespace WinFormsApp1
         private void PictureBox1_Click(object sender, EventArgs e)
         {
             Main_Menu qwerty = new Main_Menu();
-            
+
             qwerty.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Status NewForm = new Status();
+
+            NewForm.Show();
             this.Close();
         }
     }
