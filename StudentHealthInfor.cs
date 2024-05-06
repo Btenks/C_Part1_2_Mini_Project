@@ -1,46 +1,67 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
     public partial class StudentHealthInfor : Form
     {
-        public string Allergies { get; set; }
-        public string SpecialCare { get; set; }
-        public string Diseases { get; set; }
-       
-        public StudentHealthInfor()
+        // Connection string to the database
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Tendai\\source\\repos\\WinFormsApp1\\obj\\Debug\\net8.0-windows\\LoginDB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
+
+        public StudentHealthInfor(string regNo)
         {
             InitializeComponent();
+            Txtregno.Text = regNo; // Set the regNo in the textbox
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Capture health information from text boxes into variables
-            Allergies = Txtallegies.Text;
-            SpecialCare = Txtspecial.Text;
-            Diseases = Txtdiseases.Text;
+            try
+            {
+                // Create a connection to the database
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-            NEXTofKin Next = new NEXTofKin();
-            Next.Show();
-            this.Close();
-        }
+                    // Prepare the SQL query
+                    string query = @"UPDATE studentinfo SET Allergies = @Allergies, SpecialCare = @SpecialCare, Diseases = @Diseases 
+                                     WHERE RegNo = @RegNo";
 
-        private void Txtspecial_TextChanged(object sender, EventArgs e)
-        {
+                    // Create a command object
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameters to the command
+                        command.Parameters.AddWithValue("@Allergies", Txtallergies.Text);
+                        command.Parameters.AddWithValue("@SpecialCare", Txtspecial.Text);
+                        command.Parameters.AddWithValue("@Diseases", Txtdiseases.Text);
+                        command.Parameters.AddWithValue("@RegNo", Txtregno.Text);
 
-        }
+                        // Execute the command
+                        int rowsAffected = command.ExecuteNonQuery();
 
-        private void StudentHealthInfor_Load(object sender, EventArgs e)
-        {
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                            // Pass regNo to the NEXTofKin form and navigate to it
+                            NEXTofKin nextOfKinForm = new NEXTofKin(Txtregno.Text);
+                            nextOfKinForm.Show();
+
+                            // Close the current form
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No records updated!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

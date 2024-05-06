@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -13,37 +7,20 @@ namespace WinFormsApp1
 {
     public partial class StudentInfo1 : Form
     {
-        // Variables to store entered details
-        public string regNo;
-        public string name;
-        public string phoneNumber;
-        public string email;
-        public string homeAddress;
-        public string gender;
-
-
+        // Connection string to the database
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Tendai\\source\\repos\\WinFormsApp1\\obj\\Debug\\net8.0-windows\\LoginDB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
 
         public StudentInfo1()
         {
             InitializeComponent();
         }
 
-        private void StudentInfo1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
-            {  // Capture details from text boxes into variables
-                regNo = Txtregno.Text;
-                name = Txtname.Text;
-                phoneNumber = Txtphonenumber.Text;
-                email = Txtemail.Text;
-                homeAddress = Txtaddress.Text;
-
-                // Determine gender based on radio button selection
+            try
+            {
+                // Determine the selected gender
+                string gender = "";
                 if (Radiomale.Checked)
                 {
                     gender = "Male";
@@ -53,18 +30,48 @@ namespace WinFormsApp1
                     gender = "Female";
                 }
 
-                // Open the next form
-                StudentInfo2 Mwana2 = new StudentInfo2();
-                Mwana2.Show();
-                this.Close();
+                // Create a connection to the database
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Prepare the SQL query
+                    string query = @"INSERT INTO studentinfo (RegNo, Name, PhoneNumber, Email, HomeAddress, Gender) 
+                             VALUES (@RegNo, @Name, @PhoneNumber, @Email, @HomeAddress, @Gender)";
+
+                    // Create a command object
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Add parameters to the command
+                        command.Parameters.AddWithValue("@RegNo", Txtregno.Text);
+                        command.Parameters.AddWithValue("@Name", Txtname.Text);
+                        command.Parameters.AddWithValue("@PhoneNumber", Txtphonenumber.Text);
+                        command.Parameters.AddWithValue("@Email", Txtemail.Text);
+                        command.Parameters.AddWithValue("@HomeAddress", Txtaddress.Text);
+                        command.Parameters.AddWithValue("@Gender", gender);
+
+                        // Execute the command
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Proceed to the next formQ    
+                        StudentInfo2 studentInfo2Form = new StudentInfo2(Txtregno.Text);
+                        studentInfo2Form.Show();
+                        this.Hide(); // Hide the current form
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void Txtregno_TextChanged(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }
     }
 }
-    
 

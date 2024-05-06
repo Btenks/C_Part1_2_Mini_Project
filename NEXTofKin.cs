@@ -6,74 +6,40 @@ namespace WinFormsApp1
 {
     public partial class NEXTofKin : Form
     {
-        // Fields to store information from previous forms
+        // Connection string to the database
+        private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Tendai\\source\\repos\\WinFormsApp1\\obj\\Debug\\net8.0-windows\\LoginDB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True";
         private string regNo;
-        private string name;
-        private string phoneNumber;
-        private string email;
-        private string homeAddress;
-        private string gender;
-        private string school;
-        private string program;
-        private string level;
-        private string allergies;
-        private string specialCare;
-        private string diseases;
 
-        public NEXTofKin()
+        public NEXTofKin(string regNo)
         {
             InitializeComponent();
-        }
-
-        // Constructor to receive information from previous forms
-        public NEXTofKin(string regNo, string name, string phoneNumber, string email, string homeAddress, string gender, string school, string program, string level, string allergies, string specialCare, string diseases) : this()
-        {
-            // Assign received values to fields
-            this.regNo = regNo;
-            this.name = name;
-            this.phoneNumber = phoneNumber;
-            this.email = email;
-            this.homeAddress = homeAddress;
-            this.gender = gender;
-            this.school = school;
-            this.program = program;
-            this.level = level;
-            this.allergies = allergies;
-            this.specialCare = specialCare;
-            this.diseases = diseases;
+            this.regNo = regNo; // Store the regNo
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                // Insert data into the database
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Tendai\\source\\repos\\WinFormsApp1\\obj\\Debug\\net8.0-windows\\LoginDB.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False";
-
+                // Create a connection to the database
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    string insertQuery = "INSERT INTO NextOfKinTable (RegNo, Name, PhoneNumber, Email, HomeAddress, Gender, School, Program, Level, Allergies, SpecialCare, Diseases, NextOfKinName, Relationship, NextOfKinPhoneNumber, NextOfKinEmail, NextOfKinHomeAddress, NextOfKinGender) " +
-                                         "VALUES (@RegNo, @Name, @PhoneNumber, @Email, @HomeAddress, @Gender, @School, @Program, @Level, @Allergies, @SpecialCare, @Diseases, @NextOfKinName, @Relationship, @NextOfKinPhoneNumber, @NextOfKinEmail, @NextOfKinHomeAddress, @NextOfKinGender)";
+                    // Prepare the SQL query
+                    string query = @"UPDATE studentinfo 
+                                     SET NextOfKinName = @NextOfKinName, 
+                                         Relationship = @Relationship, 
+                                         NextOfKinPhoneNumber = @NextOfKinPhoneNumber, 
+                                         NextOfKinEmail = @NextOfKinEmail, 
+                                         NextOfKinHomeAddress = @NextOfKinHomeAddress, 
+                                         NextOfKinGender = @NextOfKinGender
+                                     WHERE RegNo = @RegNo";
 
-                    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                    // Create a command object
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        // Add parameters for student information
+                        // Add parameters to the command
                         command.Parameters.AddWithValue("@RegNo", regNo);
-                        command.Parameters.AddWithValue("@Name", name);
-                        command.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
-                        command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@HomeAddress", homeAddress);
-                        command.Parameters.AddWithValue("@Gender", gender);
-                        command.Parameters.AddWithValue("@School", school);
-                        command.Parameters.AddWithValue("@Program", program);
-                        command.Parameters.AddWithValue("@Level", level);
-                        command.Parameters.AddWithValue("@Allergies", allergies);
-                        command.Parameters.AddWithValue("@SpecialCare", specialCare);
-                        command.Parameters.AddWithValue("@Diseases", diseases);
-
-                        // Add parameters for next of kin information
                         command.Parameters.AddWithValue("@NextOfKinName", Nametxt.Text);
                         command.Parameters.AddWithValue("@Relationship", Relationshiptxt.Text);
                         command.Parameters.AddWithValue("@NextOfKinPhoneNumber", Phonetxt.Text);
@@ -81,10 +47,20 @@ namespace WinFormsApp1
                         command.Parameters.AddWithValue("@NextOfKinHomeAddress", Addresstxt.Text);
 
                         // Determine kin gender based on radio button selection
-                        string sex = Maleradio.Checked ? "Male" : "Female";
-                        command.Parameters.AddWithValue("@NextOfKinGender", sex);
+                        string nextOfKinGender = Maleradio.Checked ? "Male" : "Female";
+                        command.Parameters.AddWithValue("@NextOfKinGender", nextOfKinGender);
 
+                        // Execute the command
                         command.ExecuteNonQuery();
+
+                        MessageBox.Show("Data saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Navigate to the Terms form
+                        Terms termsForm = new Terms();
+                        termsForm.Show();
+
+                        // Close the current form
+                        this.Close();
                     }
                 }
             }
@@ -95,4 +71,3 @@ namespace WinFormsApp1
         }
     }
 }
-

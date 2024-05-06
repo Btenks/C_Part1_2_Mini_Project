@@ -53,7 +53,7 @@
             button1.TabIndex = 0;
             button1.Text = "NEXT ";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
             // 
             // Txtregno
             // 
@@ -62,7 +62,6 @@
             Txtregno.Name = "Txtregno";
             Txtregno.Size = new Size(205, 26);
             Txtregno.TabIndex = 1;
-            Txtregno.TextChanged += Txtregno_TextChanged;
             // 
             // Label1
             // 
@@ -213,7 +212,6 @@
             Name = "StudentInfo1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudentInfo1";
-            Load += StudentInfo1_Load;
             ResumeLayout(false);
             PerformLayout();
         }

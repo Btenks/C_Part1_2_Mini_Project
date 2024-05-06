@@ -35,9 +35,11 @@
             label3 = new Label();
             label2 = new Label();
             Label1 = new Label();
-            Txtallegies = new TextBox();
+            Txtallergies = new TextBox();
             button1 = new Button();
             label6 = new Label();
+            label7 = new Label();
+            Txtregno = new TextBox();
             SuspendLayout();
             // 
             // label5
@@ -53,7 +55,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(82, 118);
+            label4.Location = new Point(72, 149);
             label4.Name = "label4";
             label4.Size = new Size(91, 19);
             label4.TabIndex = 30;
@@ -62,23 +64,20 @@
             // Txtdiseases
             // 
             Txtdiseases.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Txtdiseases.Location = new Point(278, 213);
+            Txtdiseases.Location = new Point(259, 256);
             Txtdiseases.Margin = new Padding(3, 2, 3, 2);
-            Txtdiseases.Multiline = true;
             Txtdiseases.Name = "Txtdiseases";
-            Txtdiseases.Size = new Size(180, 21);
+            Txtdiseases.Size = new Size(214, 26);
             Txtdiseases.TabIndex = 29;
             // 
             // Txtspecial
             // 
             Txtspecial.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Txtspecial.Location = new Point(278, 164);
+            Txtspecial.Location = new Point(259, 201);
             Txtspecial.Margin = new Padding(3, 2, 3, 2);
-            Txtspecial.Multiline = true;
             Txtspecial.Name = "Txtspecial";
-            Txtspecial.Size = new Size(180, 21);
+            Txtspecial.Size = new Size(214, 26);
             Txtspecial.TabIndex = 28;
-            Txtspecial.TextChanged += Txtspecial_TextChanged;
             // 
             // label3
             // 
@@ -93,7 +92,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(10, 171);
+            label2.Location = new Point(12, 201);
             label2.Name = "label2";
             label2.Size = new Size(233, 19);
             label2.TabIndex = 26;
@@ -103,25 +102,24 @@
             // 
             Label1.AutoSize = true;
             Label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label1.Location = new Point(164, 49);
+            Label1.Location = new Point(166, 31);
             Label1.Name = "Label1";
             Label1.Size = new Size(261, 38);
             Label1.TabIndex = 25;
             Label1.Text = "ENTER STUDENT HEALTH DETAILS\r\n\r\n";
             // 
-            // Txtallegies
+            // Txtallergies
             // 
-            Txtallegies.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Txtallegies.Location = new Point(278, 116);
-            Txtallegies.Margin = new Padding(3, 2, 3, 2);
-            Txtallegies.Multiline = true;
-            Txtallegies.Name = "Txtallegies";
-            Txtallegies.Size = new Size(180, 21);
-            Txtallegies.TabIndex = 24;
+            Txtallergies.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txtallergies.Location = new Point(259, 146);
+            Txtallergies.Margin = new Padding(3, 2, 3, 2);
+            Txtallergies.Name = "Txtallergies";
+            Txtallergies.Size = new Size(214, 26);
+            Txtallergies.TabIndex = 24;
             // 
             // button1
             // 
-            button1.Location = new Point(246, 293);
+            button1.Location = new Point(248, 330);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(93, 29);
@@ -134,11 +132,29 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(19, 220);
+            label6.Location = new Point(28, 259);
             label6.Name = "label6";
             label6.Size = new Size(194, 19);
             label6.TabIndex = 32;
             label6.Text = "ANY CHRONIC DISEASES";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(72, 92);
+            label7.Name = "label7";
+            label7.Size = new Size(67, 19);
+            label7.TabIndex = 34;
+            label7.Text = "REG NO";
+            // 
+            // Txtregno
+            // 
+            Txtregno.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txtregno.Location = new Point(259, 89);
+            Txtregno.Name = "Txtregno";
+            Txtregno.Size = new Size(214, 26);
+            Txtregno.TabIndex = 33;
             // 
             // StudentHealthInfor
             // 
@@ -146,6 +162,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(574, 384);
+            Controls.Add(label7);
+            Controls.Add(Txtregno);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -154,13 +172,12 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(Label1);
-            Controls.Add(Txtallegies);
+            Controls.Add(Txtallergies);
             Controls.Add(button1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "StudentHealthInfor";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "StudentHealthInfor";
-            Load += StudentHealthInfor_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -174,8 +191,10 @@
         private Label label3;
         private Label label2;
         private Label Label1;
-        private TextBox Txtallegies;
+        private TextBox Txtallergies;
         private Button button1;
         private Label label6;
+        private Label label7;
+        private TextBox Txtregno;
     }
 }
