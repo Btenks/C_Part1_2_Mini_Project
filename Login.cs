@@ -60,11 +60,9 @@ namespace WinFormsApp1
 
         private void Signupbtn_Click(object sender, EventArgs e)
         {
-            Signup CAcc = new Signup(); // Instantiate Signup form
-            CAcc.Show();
-            this.Hide();
-        }
 
+
+        }
         private void Label9_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -76,6 +74,20 @@ namespace WinFormsApp1
         }
 
         private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Signupbtn_Click_1(object sender, EventArgs e)
+        {
+
+            Signup CAcc = new Signup(); // Instantiate Signup form
+            CAcc.Show();
+            this.Hide();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

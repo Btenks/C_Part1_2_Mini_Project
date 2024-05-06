@@ -44,15 +44,15 @@
             ShowPasswordchk = new CheckBox();
             label4 = new Label();
             panel1 = new Panel();
+            label8 = new Label();
             label9 = new Label();
+            pictureBox3 = new PictureBox();
             Signupbtn = new Button();
+            pictureBox2 = new PictureBox();
             label14 = new Label();
             label13 = new Label();
             label7 = new Label();
             checkBox1 = new CheckBox();
-            label8 = new Label();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
             label10 = new Label();
             Password = new TextBox();
             Username = new TextBox();
@@ -220,6 +220,20 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(669, 434);
             panel1.TabIndex = 9;
+            panel1.Paint += panel1_Paint;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.FlatStyle = FlatStyle.Flat;
+            label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.ButtonFace;
+            label8.Location = new Point(395, 402);
+            label8.Name = "label8";
+            label8.Size = new Size(101, 18);
+            label8.TabIndex = 1;
+            label8.Text = "@BTENKS95";
             // 
             // label9
             // 
@@ -234,6 +248,17 @@
             label9.Text = "X";
             label9.Click += Label9_Click;
             // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Location = new Point(13, 309);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(214, 111);
+            pictureBox3.TabIndex = 3;
+            pictureBox3.TabStop = false;
+            // 
             // Signupbtn
             // 
             Signupbtn.BackColor = Color.MidnightBlue;
@@ -246,6 +271,20 @@
             Signupbtn.TabIndex = 15;
             Signupbtn.Text = "SignUp";
             Signupbtn.UseVisualStyleBackColor = false;
+            Signupbtn.Click += Signupbtn_Click_1;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.BackgroundImage = Properties.Resources.OIP;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.ImageLocation = "";
+            pictureBox2.InitialImage = Properties.Resources.R;
+            pictureBox2.Location = new Point(13, 10);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(142, 130);
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
             // 
             // label14
             // 
@@ -296,43 +335,6 @@
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = false;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged_1;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.Transparent;
-            label8.FlatStyle = FlatStyle.Flat;
-            label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.ForeColor = SystemColors.ButtonFace;
-            label8.Location = new Point(395, 402);
-            label8.Name = "label8";
-            label8.Size = new Size(101, 18);
-            label8.TabIndex = 1;
-            label8.Text = "@BTENKS95";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(13, 309);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(214, 111);
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = Properties.Resources.OIP;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.ImageLocation = "";
-            pictureBox2.InitialImage = Properties.Resources.R;
-            pictureBox2.Location = new Point(13, 10);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(142, 130);
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
             // 
             // label10
             // 

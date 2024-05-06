@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
+            Txtregno = new TextBox();
             Label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            Txtname = new TextBox();
+            Txtphonenumber = new TextBox();
+            Txtemail = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
+            Radiofemale = new RadioButton();
+            Radiomale = new RadioButton();
             label6 = new Label();
-            textBox5 = new TextBox();
+            Txtaddress = new TextBox();
             label7 = new Label();
             SuspendLayout();
             // 
@@ -55,21 +55,22 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
+            // Txtregno
             // 
-            textBox1.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(239, 80);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(205, 31);
-            textBox1.TabIndex = 1;
+            Txtregno.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txtregno.Location = new Point(239, 80);
+            Txtregno.Name = "Txtregno";
+            Txtregno.Size = new Size(205, 26);
+            Txtregno.TabIndex = 1;
+            Txtregno.TextChanged += Txtregno_TextChanged;
             // 
             // Label1
             // 
             Label1.AutoSize = true;
             Label1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Label1.Location = new Point(195, 19);
+            Label1.Location = new Point(239, 9);
             Label1.Name = "Label1";
-            Label1.Size = new Size(249, 22);
+            Label1.Size = new Size(198, 19);
             Label1.TabIndex = 2;
             Label1.Text = "ENTER STUDENT DETAILS\r\n";
             // 
@@ -79,7 +80,7 @@
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(43, 83);
             label2.Name = "label2";
-            label2.Size = new Size(82, 22);
+            label2.Size = new Size(67, 19);
             label2.TabIndex = 3;
             label2.Text = "REG NO";
             // 
@@ -89,33 +90,33 @@
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(43, 146);
             label3.Name = "label3";
-            label3.Size = new Size(67, 22);
+            label3.Size = new Size(55, 19);
             label3.TabIndex = 4;
             label3.Text = "NAME";
             // 
-            // textBox2
+            // Txtname
             // 
-            textBox2.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(239, 137);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(205, 31);
-            textBox2.TabIndex = 5;
+            Txtname.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txtname.Location = new Point(239, 137);
+            Txtname.Name = "Txtname";
+            Txtname.Size = new Size(205, 26);
+            Txtname.TabIndex = 5;
             // 
-            // textBox3
+            // Txtphonenumber
             // 
-            textBox3.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(239, 199);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(205, 31);
-            textBox3.TabIndex = 6;
+            Txtphonenumber.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txtphonenumber.Location = new Point(239, 199);
+            Txtphonenumber.Name = "Txtphonenumber";
+            Txtphonenumber.Size = new Size(205, 26);
+            Txtphonenumber.TabIndex = 6;
             // 
-            // textBox4
+            // Txtemail
             // 
-            textBox4.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(239, 249);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(205, 31);
-            textBox4.TabIndex = 7;
+            Txtemail.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txtemail.Location = new Point(239, 249);
+            Txtemail.Name = "Txtemail";
+            Txtemail.Size = new Size(205, 26);
+            Txtemail.TabIndex = 7;
             // 
             // label4
             // 
@@ -123,7 +124,7 @@
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(43, 208);
             label4.Name = "label4";
-            label4.Size = new Size(162, 22);
+            label4.Size = new Size(132, 19);
             label4.TabIndex = 8;
             label4.Text = "PHONE NUMBER";
             // 
@@ -133,31 +134,31 @@
             label5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(43, 258);
             label5.Name = "label5";
-            label5.Size = new Size(70, 22);
+            label5.Size = new Size(57, 19);
             label5.TabIndex = 9;
             label5.Text = "EMAIL";
             // 
-            // radioButton1
+            // Radiofemale
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(532, 204);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(88, 22);
-            radioButton1.TabIndex = 10;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "FEMALE ";
-            radioButton1.UseVisualStyleBackColor = true;
+            Radiofemale.AutoSize = true;
+            Radiofemale.Location = new Point(532, 204);
+            Radiofemale.Name = "Radiofemale";
+            Radiofemale.Size = new Size(71, 18);
+            Radiofemale.TabIndex = 10;
+            Radiofemale.TabStop = true;
+            Radiofemale.Text = "FEMALE ";
+            Radiofemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // Radiomale
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(532, 156);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(71, 22);
-            radioButton2.TabIndex = 11;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "MALE ";
-            radioButton2.UseVisualStyleBackColor = true;
+            Radiomale.AutoSize = true;
+            Radiomale.Location = new Point(532, 156);
+            Radiomale.Name = "Radiomale";
+            Radiomale.Size = new Size(57, 18);
+            Radiomale.TabIndex = 11;
+            Radiomale.TabStop = true;
+            Radiomale.Text = "MALE ";
+            Radiomale.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -165,17 +166,17 @@
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(532, 116);
             label6.Name = "label6";
-            label6.Size = new Size(89, 22);
+            label6.Size = new Size(71, 19);
             label6.TabIndex = 12;
             label6.Text = "GENDER";
             // 
-            // textBox5
+            // Txtaddress
             // 
-            textBox5.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(239, 297);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(205, 31);
-            textBox5.TabIndex = 29;
+            Txtaddress.Font = new Font("Stencil", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Txtaddress.Location = new Point(239, 297);
+            Txtaddress.Name = "Txtaddress";
+            Txtaddress.Size = new Size(205, 26);
+            Txtaddress.TabIndex = 29;
             // 
             // label7
             // 
@@ -183,30 +184,30 @@
             label7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.Location = new Point(43, 306);
             label7.Name = "label7";
-            label7.Size = new Size(160, 22);
+            label7.Size = new Size(128, 19);
             label7.TabIndex = 28;
             label7.Text = "HOME ADDRESS";
             // 
             // StudentInfo1
             // 
-            AutoScaleDimensions = new SizeF(9F, 18F);
+            AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(707, 445);
-            Controls.Add(textBox5);
+            Controls.Add(Txtaddress);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(Radiomale);
+            Controls.Add(Radiofemale);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(Txtemail);
+            Controls.Add(Txtphonenumber);
+            Controls.Add(Txtname);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(Label1);
-            Controls.Add(textBox1);
+            Controls.Add(Txtregno);
             Controls.Add(button1);
             Font = new Font("Stencil", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "StudentInfo1";
@@ -220,19 +221,19 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
+        private TextBox Txtregno;
         private Label Label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox Txtname;
+        private TextBox Txtphonenumber;
+        private TextBox Txtemail;
         private Label label4;
         private Label label5;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
+        private RadioButton Radiofemale;
+        private RadioButton Radiomale;
         private Label label6;
-        private TextBox textBox5;
+        private TextBox Txtaddress;
         private Label label7;
     }
 }

@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account_Settings));
             panel1 = new Panel();
             label1 = new Label();
+            pictureBox3 = new PictureBox();
             NewPassword = new TextBox();
+            pictureBox2 = new PictureBox();
             label9 = new Label();
             btnSaveChanges = new Button();
             label14 = new Label();
             label13 = new Label();
             checkBox1 = new CheckBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
             label10 = new Label();
             OldPassword = new TextBox();
             Username = new TextBox();
@@ -89,6 +89,17 @@
             label1.TabIndex = 20;
             label1.Text = "New Password";
             // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.Transparent;
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Location = new Point(3, 379);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(214, 111);
+            pictureBox3.TabIndex = 3;
+            pictureBox3.TabStop = false;
+            // 
             // NewPassword
             // 
             NewPassword.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
@@ -99,6 +110,19 @@
             NewPassword.Size = new Size(430, 35);
             NewPassword.TabIndex = 19;
             NewPassword.UseSystemPasswordChar = true;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.BackgroundImage = Properties.Resources.unnamed;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.ImageLocation = "";
+            pictureBox2.InitialImage = Properties.Resources.R;
+            pictureBox2.Location = new Point(3, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(142, 130);
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
             // 
             // label9
             // 
@@ -164,30 +188,6 @@
             checkBox1.UseVisualStyleBackColor = false;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(3, 379);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(214, 111);
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = Properties.Resources.unnamed;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.ImageLocation = "";
-            pictureBox2.InitialImage = Properties.Resources.R;
-            pictureBox2.Location = new Point(3, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(142, 130);
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
-            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -239,6 +239,7 @@
             button3.TabIndex = 0;
             button3.Text = "Back to Main Menu";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label12
             // 

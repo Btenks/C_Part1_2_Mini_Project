@@ -76,5 +76,12 @@ namespace WinFormsApp1
             OldPassword.UseSystemPasswordChar = !checkBox1.Checked;
             NewPassword.UseSystemPasswordChar = !checkBox1.Checked;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Main_Menu Main_M = new Main_Menu();
+            Main_M.Show();
+            this.Hide();
+        }
     }
 }

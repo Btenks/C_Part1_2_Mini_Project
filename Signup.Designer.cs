@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             panel1 = new Panel();
+            label8 = new Label();
+            pictureBox3 = new PictureBox();
             label3 = new Label();
             Confirm_Password = new TextBox();
             label2 = new Label();
             checkBox3 = new CheckBox();
             signup_password = new TextBox();
             label1 = new Label();
-            pictureBox3 = new PictureBox();
-            label8 = new Label();
             label10 = new Label();
             signup_username = new TextBox();
             button1 = new Button();
@@ -73,6 +73,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(803, 452);
             panel1.TabIndex = 11;
+            panel1.Paint += panel1_Paint;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.ForeColor = SystemColors.ButtonHighlight;
+            label8.Location = new Point(359, 434);
+            label8.Name = "label8";
+            label8.Size = new Size(101, 18);
+            label8.TabIndex = 1;
+            label8.Text = "@BTENKS95";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
+            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox3.Location = new Point(0, 0);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(192, 147);
+            pictureBox3.TabIndex = 3;
+            pictureBox3.TabStop = false;
             // 
             // label3
             // 
@@ -144,27 +166,6 @@
             label1.Size = new Size(86, 25);
             label1.TabIndex = 11;
             label1.Text = "Password";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackgroundImage = (Image)resources.GetObject("pictureBox3.BackgroundImage");
-            pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox3.Location = new Point(0, 0);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(192, 147);
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Papyrus", 8.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.ForeColor = SystemColors.ButtonHighlight;
-            label8.Location = new Point(359, 434);
-            label8.Name = "label8";
-            label8.Size = new Size(101, 18);
-            label8.TabIndex = 1;
-            label8.Text = "@BTENKS95";
             // 
             // label10
             // 

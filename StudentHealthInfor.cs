@@ -12,6 +12,10 @@ namespace WinFormsApp1
 {
     public partial class StudentHealthInfor : Form
     {
+        public string Allergies { get; set; }
+        public string SpecialCare { get; set; }
+        public string Diseases { get; set; }
+       
         public StudentHealthInfor()
         {
             InitializeComponent();
@@ -19,11 +23,24 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            NEXTofKin1 Next = new NEXTofKin1();
-           
-            // Display the new child form
+            // Capture health information from text boxes into variables
+            Allergies = Txtallegies.Text;
+            SpecialCare = Txtspecial.Text;
+            Diseases = Txtdiseases.Text;
+
+            NEXTofKin Next = new NEXTofKin();
             Next.Show();
             this.Close();
+        }
+
+        private void Txtspecial_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StudentHealthInfor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

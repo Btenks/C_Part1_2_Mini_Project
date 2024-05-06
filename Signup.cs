@@ -82,16 +82,21 @@ namespace WinFormsApp1
             Confirm_Password.UseSystemPasswordChar = !checkBox3.Checked;
         }
 
-            private void button3_Click(object sender, EventArgs e)
-            {
-                Login sForm = new Login();
-                sForm.Show();
-                this.Hide();
-            }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Login sForm = new Login();
+            sForm.Show();
+            this.Hide();
+        }
 
         private void label3_Click(object sender, EventArgs e)
-            {
-                Application.Exit();
-            }
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
